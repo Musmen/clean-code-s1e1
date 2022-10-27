@@ -55,7 +55,7 @@ h3 {
 }
 
 input,
-button{
+button {
   outline: none;
 }
 
@@ -138,7 +138,7 @@ li > label {
   width: 226px;
 }
 
-li >    input[type="text"] {
+li > input[type="text"] {
   width: 226px;
 }
 
