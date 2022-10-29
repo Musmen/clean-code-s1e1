@@ -5,6 +5,19 @@ body {
   font-family: lato, sans-serif;
 }
 
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
+
 .aaa {
   width: 500px;
   margin: 0 auto;
@@ -42,6 +55,7 @@ body {
 
 .task-row-wrapper {
   display: flex;
+  margin: 20px 0 0;
 }
 
 ul {
@@ -74,8 +88,7 @@ button:hover {
 }
 
 /* Heading */
-h3,
-label[for="new-task"] {
+h3 {
   color: #333;
   font-weight: 700;
   font-size: 15px;
@@ -105,7 +118,6 @@ input[type="text"]:focus {
 /* New Task */
 label[for="new-task"] {
   display: block;
-  margin: 0 0 20px;
 }
 
 input#new-task {
@@ -113,7 +125,7 @@ input#new-task {
 }
 
 /* Task list */
-li {
+.card {
   overflow: hidden;
   padding: 20px 0;
   border-bottom: 1px solid #eee;
@@ -123,22 +135,22 @@ li {
   align-items: center;
 }
 
-li > * {
+.card > * {
   vertical-align: middle;
 }
 
-li > input[type="checkbox"] {
+.card > input[type="checkbox"] {
   margin: 0 10px;
 }
 
-li > label {
+.card > span {
   padding-left: 10px;
   box-sizing: border-box;
   font-size: 18px;
   width: 226px;
 }
 
-li > input[type="text"] {
+.card > input[type="text"] {
   width: 226px;
 }
 
@@ -157,21 +169,21 @@ button.delete:hover {
 }
 
 /* Completed */
-ul#completed-tasks label {
+ul#completed-tasks span {
   text-decoration: line-through;
   color: #888;
 }
 
 /* Edit Task */
-ul li input[type="text"] {
+ul .card input[type="text"] {
   display: none;
 }
 
-ul li.editMode input[type="text"] {
+ul .card.editMode input[type="text"] {
   display: inline-block;
   width: 224px;
 }
 
-ul li.editMode label {
+ul .card.editMode span {
   display: none;
 }
