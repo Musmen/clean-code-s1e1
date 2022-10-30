@@ -120,11 +120,11 @@
 }
 
 /* New Task */
-.add-item__label_task {
+.add-item-section__label_task {
   display: block;
 }
 
-.add-item__input_task {
+.add-item-section__input_task {
   width: 318px;
 }
 
