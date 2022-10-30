@@ -1,19 +1,87 @@
-<html>
-<HEAD><title>Todo App</title>
-<link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
-<link rel="stylesheet" href="style.css" type="text/css" MEDIA="screen" charset="utf-8">
-</HEAD>
-<body>
-<div class="aaa"><img src="./eisenhower-matrix.jpg"><a class='more_inf' href="https://goal-life.com/page/method/matrix-eisenhower">Want more details&quest;</a></div>
-<div class="centered-main-page-element"><p id='topSectionForAddingElementToList'><label for="new-task">Add Item</label><div class="task-row-wrapper"><input id='new-task'class="task" type="text"><button>Add</button></div>
-</p><h3>Todo</h3>
-<ul id='incompleteTasks'>
-<li><input type='checkbox'><label class="task">Pay Bills</label><input type="text" class="task"><button class="edit">Edit</button><button class="delete"><img src="./remove.svg"></button></li>
-<li class="editMode"><input type="checkbox"><label class="task">Go Shopping</label><input type="text" value="Go Shopping" class="task"><button class='edit'>Save</button><button class="delete"><img src="./remove.svg"></button></li>
-</ul><h3>Completed</h3><ul id="completed-tasks"><li><input type="checkbox" checked><label class="task">See the Doctor</label><input type="text" class="task"><button class="edit">Edit</button><button class="delete"><img src="./remove.svg"></button>
-</li>
-</ul>
-</div>
-<script type="text/javascript" SRC="app.js"></script>
-</body>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo App</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" media="screen">
+  </head>
+  <body class="body">
+    <header class="header body__header">
+      <h1 class="logo visually-hidden">Todo App</h1>
+      <figure class="figure header__figure">
+        <img class="image header__image" src="./eisenhower-matrix.jpg" 
+            alt="The Eisenhower decision matrix image">
+      </figure>
+      <a class="link header__link" href="https://goal-life.com/page/method/matrix-eisenhower">
+        Want more details?
+      </a>
+    </header>
+
+    <main class="main body__main">
+      <article class="article main__article" id="main__article">
+        <h2 class="header header_size_medium visually-hidden">Todo List</h2>
+
+        <section class="add-item-section">
+          <form class="add-item-section__form">
+            <h3 class="header header_size_small add-item-section__header">
+              <label 
+                  class="label add-item-section__label add-item-section__label_task" 
+                  for="add-item-section__input_task">Add Item</label>
+            </h3>
+            <div class="add-item-section__wrapper">
+              <input 
+                  class="input input_text add-item-section__input add-item-section__input_task" 
+                  id="add-item-section__input_task" type="text">
+              <button class="button add-item-section__button" type="button">Add</button>
+            </div>
+          </form>
+        </section>
+
+        <section class="todo-section">
+          <h3 class="header header_size_small todo-section__header">Todo</h3>
+          <ul class="list todo-section__list" id="todo-section__list">
+            <li class="list__item">
+              <form class="card">
+                <input class="checkbox card__checkbox" type="checkbox">
+                <span class="card__task">Pay Bills</span>
+                <input class="input input_text card__input card__input_task" type="text">
+                <button class="button card__button card__button_edit" type="button">Edit</button>
+                <button class="button card__button card__button_delete" type="button"></button>
+              </form>
+            </li>
+            <li class="list__item">
+              <form class="card card_mode_edit">
+                <input class="checkbox card__checkbox" type="checkbox">
+                <span class="card__task">Go Shopping</span>
+                <input class="input input_text card__input card__input_task" type="text" 
+                    value="Go Shopping">
+                <button class="button card__button card__button_edit" type="button">Save</button>
+                <button class="button card__button card__button_delete" type="button"></button>
+              </form>
+            </li>
+          </ul>
+        </section>
+
+        <section class="completed-section">
+          <h3 class="header header_size_small completed-section__header">Completed</h3>
+          <ul class="list completed-section__list" id="completed-section__list">
+            <li class="list__item">
+              <form class="card">
+                <input class="checkbox card__checkbox" type="checkbox" checked>
+                <span class="card__task">See the Doctor</span>
+                <input class="input input_text card__input card__input_task" type="text">
+                <button class="button card__button card__button_edit" type="button">Edit</button>
+                <button class="button card__button card__button_delete" type="button"></button>
+              </form>
+            </li>
+          </ul>
+        </section>
+      </article>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
 </html>
