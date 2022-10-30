@@ -47,7 +47,7 @@
 .body__main {
   display: block;
   width: 500px;
-  margin: 0 auto 0;
+  margin: 16px auto 0;
 }
 
 .card__task,
@@ -59,7 +59,7 @@
 
 .add-item-section__wrapper {
   display: flex;
-  margin: 20px 0 0;
+  margin: 20px 0 16px;
 }
 
 .list {
